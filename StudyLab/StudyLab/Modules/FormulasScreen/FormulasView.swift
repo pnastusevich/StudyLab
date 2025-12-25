@@ -30,10 +30,6 @@ struct FormulasView: View {
                         NavigationLink(value: NavigationDestination.formulaDetail(formula)) {
                             FormulaRowView(formula: formula)
                         }
-                        .onTapGesture {
-                            logger.info("Formula tapped: \(formula.name) (\(formula.subject.rawValue))")
-                            viewModel.markFormulaViewed(formula)
-                        }
                     }
                     .listStyle(.plain)
                 }
